@@ -1,0 +1,47 @@
+{% extends "/base/baseHome.html" %}
+{% block title%}Developer School{% endblock%}
+{% block content%}
+<div class="content_home">
+    <div class="firt_message">
+        <h1>Prepárate para el futuro y domina la <span class="color_web">web</span>.</h1>
+        <p>El mundo muestra un gran déficit de desarrolladores 
+           de software, necesitan de ti y de tus conocimientos. 
+           Demuestra lo que sabes y lo que eres capaz de hacer.</p>
+        <button>¡Empieza ya!</button>
+    </div>
+    <div class="course">
+        <h2 class="subtitle">Qué te enseñaremos</h2>
+        <div class="term">
+            <div class="html">
+                <div class="icon">
+                    <img src="{{url_for('static', filename='/image/Icons/html.svg')}}" alt="">
+                </div>
+                <h2>HTML</h2>
+                <p>Es el componente más básico de la Web. Define el significado y la estructura del contenido web.</p>
+                <button>Ir al curso</button>
+            </div>
+            <div class="css">
+                <div class="icon">
+                    <img src="{{url_for('static', filename='/image/Icons/css.svg')}}" alt="">
+                </div>
+                <h2>CSS</h2>
+                <p>Es el segundo lenguaje más esencial para crear páginas web, define los estilos necesarios.</p>
+                <button>Ir al curso</button>
+            </div>
+            <div class="js">
+                <div class="icon">
+                    <img src="{{url_for('static', filename='/image/Icons/js.svg')}}" alt="">
+                </div>
+                <h2>JAVASCRIPT</h2>
+                <p>Te permite implementar funciones para animar botones, ejecutar funciones, etc.</p>
+                <button>Ir al curso</button>
+            </div>
+        </div>
+    </div>
+    <div class="message">
+        <h2>El <span class="color_web">mundo</span> te ofrece oportunidades, nosotros te <span class="color_web">ayudamos</span>.</h2>
+        <p>Con la gran cantidad de desarrolladores web que hacen falta en el mundo, tus posibilidades de empleo se duplican, tus conocimientos te haran sentir confiado de lo que sabes y tus expectativas se elevarán para demostrarte que sí puedes y eres capaz de lograr lo que te propones.</p>
+        <button>Empieza ya con los cursos</button>
+    </div>
+</div>
+{% endblock%}

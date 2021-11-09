@@ -1,0 +1,329 @@
+/* ------------------------------FONTS------------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+
+/* ------------------------------VARIABLE------------------------------ */
+/* Variable for colors */
+:root{
+    --ColorBackground: #E3FFD1;
+    --ColorTitle: #2B463C;
+    --ColorParagraph: #2E2D2D;
+    --ColorButtom: #688F4E;
+    --ColorFondoIcon: #EDEDED;
+    --ColorIconInactivate: #CFCFCF;
+}
+/* Variable for font */
+:root{
+    --fontParagraph: 'Alice', serif;
+    --fontTitle: 'Montserrat', sans-serif;
+}
+/* Variable for font-zise */
+:root{
+    --fontSizeParagraph: 20px;
+    --fontSizeTitle: 48px;
+    --fontSizeButtom: 17px;
+    --fontSizeOption: 14px;
+    --fontSizeSubtitle: 30px;
+}
+
+/* --------------------------------------ICONS------------------------------------ */
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-normal { color: var(--ColorButtom);}
+
+/* Rules for using icons as white on a dark background.
+.material-icons.md-light { color: var(--ColorButtom); }
+.material-icons.md-light.md-inactive { color: var(--ColorIconInactivate); } */
+
+
+
+/* ------------------------------MAIN_CONTENT------------------------------ */
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: var(--ColorBackground);
+    font-family: var(--fontParagraph);
+}
+/* Menu customization */
+.menu{
+    width: 100%;
+    height: 70px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--fontTitle);
+    font-size: var(--fontSizeButtom);
+    font-weight: 700;
+    box-shadow: 0px 4px 32px rgb(158, 158, 158, 0.2);
+}
+
+.content_menu{
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.option nav ul li{
+    list-style: none;
+    margin: 0px 20px;
+}
+
+.option nav ul li a{
+    text-decoration: none;
+    color: var(--ColorTitle);
+}
+
+.option nav ul {
+    display: flex;
+    align-items: center;
+}
+
+.logo_option{
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.acceso_plataforma{
+    width: 285px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.acceso_plataforma a{
+    text-decoration: none;
+    color: var(--ColorTitle); 
+}
+
+.acceso_plataforma button{
+    height: 45px;
+    width: 150px;
+    background-color: var(--ColorButtom);
+    color: var(--ColorTitle);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: var(--fontSizeButtom);
+    font-weight: 700;
+}
+
+/*  Footer customization */
+
+.footer{
+    width: 100%;
+    height: 200px;
+    background-color: var(--ColorBackground);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+}
+
+.menu_footer{
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.option_menu nav ul li{
+    list-style: none;
+    margin: 5px 0px;
+}
+
+.option_menu nav ul li a{
+    text-decoration: none;
+    font-size: var(--fontSizeOption);
+    font-family: var(--fontTitle);
+    color: var(--ColorTitle);
+}
+
+.description_project{
+    width: 250px;
+    text-align: right;
+    color: var(--ColorTitle);
+}
+
+.description_project h3{
+    font-size: var(--fontSizeOption);
+    font-family: var(--fontTitle);
+    margin-bottom: 10px;
+}
+
+.description_project p{
+    font-size: var(--fontSizeOption);
+    font-family: var(--fontTitle);
+}
+
+/* ----------------------------------------------INDEX-------------------------------------------------- */
+.firt_message{
+    width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 100px;
+}
+
+.firt_message h1{
+    width: 800px;
+    font-size: var(--fontSizeTitle);
+    font-family: var(--fontTitle);
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--ColorTitle);
+}
+
+.color_web{
+    color: var(--ColorButtom);
+}
+
+.firt_message p{
+    width: 540px;
+    font-size: var(--fontSizeParagraph);
+    font-family: var(--fontParagraph);
+    text-align: center;
+    margin-bottom: 25px;
+    color: var(--ColorTitle);
+}
+
+.firt_message button{
+    height: 45px;
+    width: 300px;
+    background-color: var(--ColorButtom);
+    color: var(--ColorTitle);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: var(--fontSizeButtom);
+    font-weight: 700;
+}
+
+/* Courses Costumizes */
+.course{
+    width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 140px;
+}
+
+.subtitle{
+    font-size: var(--fontSizeSubtitle);
+    font-family: var(--fontTitle);
+    color: var(--ColorTitle);
+    margin-bottom: 50px;
+}
+
+.term{
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.html, .css, .js{
+    width: 305px;
+    height: 370px;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 4px 32px rgb(158, 158, 158, 0.3);
+}
+
+.icon{
+    width: 82px;
+    height: 82px;
+    border-radius: 5px;
+    background-color: var(--ColorFondoIcon);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.term h2{
+    font-size: var(--fontSizeButtom);
+    margin: 20px;
+    color: var(--ColorTitle);
+    font-family: var(--fontTitle);
+}
+
+.term p{
+    width: 250px;
+    text-align: center;
+    font-size: var(--fontSizeParagraph);
+    color: var(--ColorTitle);
+    margin-bottom: 30px;
+}
+
+.term button{
+    height: 45px;
+    width: 150px;
+    border-radius: 5px;
+    background-color: var(--ColorButtom);
+    color: var(--ColorTitle);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: var(--fontSizeButtom);
+    font-family: var(--fontTitle);
+    font-weight: 700;
+}
+
+/* Message Customizes */
+.message{
+    width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.message h2{
+    width: 550px;
+    font-family: var(--fontTitle);
+    font-size: var(--fontSizeSubtitle);
+    margin-bottom: 50px;
+    text-align: center;
+    color: var(--ColorTitle);
+}
+
+.message p{
+    width: 630px;
+    font-size: var(--fontSizeParagraph);
+    color: var(--ColorTitle);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.message button{
+    width: 325px;
+    height: 45px;
+    background-color: var(--ColorButtom);
+    color: var(--ColorTitle);
+    font-family: var(--fontTitle);
+    border-radius: 5px;
+    font-size: var(--fontSizeButtom);
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='/css/style.css')}}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" href="{{url_for('static', filename='/image/Logo/Logo.svg')}}" />
+    <title>{% block title%}Base{% endblock%}</title>
+</head>
+<body>
+    <div class="menu">
+
+        <div class="content_menu">
+            <div class="logo_option">
+                <a href="#"><img src="{{url_for('static', filename='/image/Logo/Logo.svg')}}" alt="Logo de la entidad"></a>
+                <div class="option">
+                    <nav>
+                        <ul>
+                            <li><a href="#">Inicio</a></li>
+                            <li><a href="#">Cursos</a></li>
+                            <li><a href="#">Conocenos</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+    
+            <div class="acceso_plataforma">
+                <a href="#" class="login">Iniciar Sesión</a>
+                <button class="register">Registrarse</button>
+            </div>
+        </div>
+    </div>
+
+    {% block content%}
+    {% endblock%}
+
+
+    <div class="footer">
+        <div class="menu_footer">
+            <div class="option_menu">
+                <nav>
+                    <ul>
+                        <li><a href="#">Acerca de nosotros</a></li>
+                        <li><a href="#">Políticas de privacidad</a></li>
+                        <li><a href="#">Fundador del proyecto</a></li>
+                        <li><a href="#">De regreso al inicio</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="complete_logo">
+                <img src="{{url_for('static', filename='/image/Logo/Logo_Complete.svg')}}" alt="">
+            </div>
+            <div class="description_project">
+                <h3>Developer School</h3>
+                <p>Este proyecto nace con el objetivo de aportar al desarrollo de las personas y de nuestro país</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
