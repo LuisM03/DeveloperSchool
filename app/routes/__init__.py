@@ -6,5 +6,6 @@ from app.schemas.models import User
 def index():
     return render_template('index.html')
 
-# @app.route('/register')
-# def register():
+@app.route('/register')
+def register():
+    return render_template('baseForm.html')
