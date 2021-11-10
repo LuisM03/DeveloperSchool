@@ -82,6 +82,11 @@ body{
 .option nav ul li a{
     text-decoration: none;
     color: var(--ColorTitle);
+    transition: color 0.3s ease-in-out;
+}
+
+.option nav ul li a:hover{
+    color: var(--ColorButtom);
 }
 
 .option nav ul {
@@ -106,6 +111,11 @@ body{
 .acceso_plataforma a{
     text-decoration: none;
     color: var(--ColorTitle); 
+    transition: color 0.3s ease-in-out;
+}
+
+.acceso_plataforma a:hover{
+    color: var(--ColorButtom);
 }
 
 .acceso_plataforma button{
@@ -119,6 +129,12 @@ body{
     cursor: pointer;
     font-size: var(--fontSizeButtom);
     font-weight: 700;
+    transition: background-color 0.3s, color 0.3s ease-in-out;
+}
+
+.acceso_plataforma button:hover{
+    background-color: var(--ColorTitle);
+    color: var(--ColorButtom);
 }
 
 /*  Footer customization */
@@ -139,6 +155,10 @@ body{
     justify-content: space-between;
 }
 
+.option_menu{
+    width: 200px;
+}
+
 .option_menu nav ul li{
     list-style: none;
     margin: 5px 0px;
@@ -149,6 +169,11 @@ body{
     font-size: var(--fontSizeOption);
     font-family: var(--fontTitle);
     color: var(--ColorTitle);
+    transition: font-weight 0.3s ease-in-out;
+}
+
+.option_menu nav ul li a:hover{
+    font-weight: 500;
 }
 
 .description_project{
@@ -167,6 +192,7 @@ body{
     font-size: var(--fontSizeOption);
     font-family: var(--fontTitle);
 }
+
 
 /* ----------------------------------------------INDEX-------------------------------------------------- */
 .firt_message{
@@ -212,6 +238,12 @@ body{
     cursor: pointer;
     font-size: var(--fontSizeButtom);
     font-weight: 700;
+    transition: background-color 0.3s, color 0.3s ease-in-out;
+}
+
+.firt_message button:hover{
+    background-color: var(--ColorTitle);
+    color: var(--ColorButtom);
 }
 
 /* Courses Costumizes */
@@ -286,6 +318,12 @@ body{
     font-size: var(--fontSizeButtom);
     font-family: var(--fontTitle);
     font-weight: 700;
+    transition: background-color 0.3s, color 0.3s ease-in-out;
+}
+
+.term button:hover{
+    background-color: var(--ColorTitle);
+    color: var(--ColorButtom);
 }
 
 /* Message Customizes */
@@ -326,4 +364,10 @@ body{
     border: none;
     cursor: pointer;
     font-weight: 700;
+    transition: background-color 0.3s, color 0.3s ease-in-out;
+}
+
+.message button:hover{
+    background-color: var(--ColorTitle);
+    color: var(--ColorButtom);
 }
