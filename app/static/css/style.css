@@ -5,7 +5,7 @@
 /* ------------------------------VARIABLE------------------------------ */
 /* Variable for colors */
 :root{
-    --ColorBackground: #E3FFD1;
+    --ColorBackground: white;
     --ColorTitle: #2B463C;
     --ColorParagraph: #2E2D2D;
     --ColorButtom: #688F4E;
@@ -19,9 +19,9 @@
 }
 /* Variable for font-zise */
 :root{
-    --fontSizeParagraph: 20px;
+    --fontSizeParagraph: 17px;
     --fontSizeTitle: 48px;
-    --fontSizeButtom: 17px;
+    --fontSizeButtom: 15px;
     --fontSizeOption: 14px;
     --fontSizeSubtitle: 30px;
 }
@@ -62,7 +62,7 @@ body{
     align-items: center;
     font-family: var(--fontTitle);
     font-size: var(--fontSizeButtom);
-    font-weight: 700;
+    font-weight: 500;
     box-shadow: 0px 4px 32px rgb(158, 158, 158, 0.2);
 }
 
@@ -118,23 +118,29 @@ body{
     color: var(--ColorButtom);
 }
 
-.acceso_plataforma button{
-    height: 45px;
-    width: 150px;
+/* Creating collective styles */
+
+button{
     background-color: var(--ColorButtom);
     color: var(--ColorTitle);
+    font-family: var(--fontTitle);
+    font-size: var(--fontSizeButtom);
+    font-weight: 500;
     border-radius: 5px;
     border: none;
     outline: none;
     cursor: pointer;
-    font-size: var(--fontSizeButtom);
-    font-weight: 700;
     transition: background-color 0.3s, color 0.3s ease-in-out;
 }
 
-.acceso_plataforma button:hover{
+button:hover{
     background-color: var(--ColorTitle);
     color: var(--ColorButtom);
+}
+
+.acceso_plataforma button{
+    height: 45px;
+    width: 150px;  
 }
 
 /*  Footer customization */
@@ -173,7 +179,7 @@ body{
 }
 
 .option_menu nav ul li a:hover{
-    font-weight: 500;
+    color: var(--ColorButtom);
 }
 
 .description_project{
@@ -230,20 +236,6 @@ body{
 .firt_message button{
     height: 45px;
     width: 300px;
-    background-color: var(--ColorButtom);
-    color: var(--ColorTitle);
-    border-radius: 5px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-size: var(--fontSizeButtom);
-    font-weight: 700;
-    transition: background-color 0.3s, color 0.3s ease-in-out;
-}
-
-.firt_message button:hover{
-    background-color: var(--ColorTitle);
-    color: var(--ColorButtom);
 }
 
 /* Courses Costumizes */
@@ -277,7 +269,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0px 4px 32px rgb(158, 158, 158, 0.3);
+    box-shadow: 0px 4px 32px rgb(158, 158, 158, 0.4);
 }
 
 .icon{
@@ -309,21 +301,6 @@ body{
 .term button{
     height: 45px;
     width: 150px;
-    border-radius: 5px;
-    background-color: var(--ColorButtom);
-    color: var(--ColorTitle);
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-size: var(--fontSizeButtom);
-    font-family: var(--fontTitle);
-    font-weight: 700;
-    transition: background-color 0.3s, color 0.3s ease-in-out;
-}
-
-.term button:hover{
-    background-color: var(--ColorTitle);
-    color: var(--ColorButtom);
 }
 
 /* Message Customizes */
@@ -356,18 +333,4 @@ body{
 .message button{
     width: 325px;
     height: 45px;
-    background-color: var(--ColorButtom);
-    color: var(--ColorTitle);
-    font-family: var(--fontTitle);
-    border-radius: 5px;
-    font-size: var(--fontSizeButtom);
-    border: none;
-    cursor: pointer;
-    font-weight: 700;
-    transition: background-color 0.3s, color 0.3s ease-in-out;
-}
-
-.message button:hover{
-    background-color: var(--ColorTitle);
-    color: var(--ColorButtom);
 }
