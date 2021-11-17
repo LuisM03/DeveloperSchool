@@ -6,9 +6,15 @@
 /* Variable for colors */
 :root{
     --ColorBackground: white;
-    --ColorTitle: #2B463C;
+
+    --ColorTitle: #2E2D2D;
+    --ColorTitle2: #808080;
     --ColorParagraph: #2E2D2D;
-    --ColorButtom: #688F4E;
+
+    --ColorBackgroundButtom: #2E2D2D;
+    --ColorTextButton: #ffffff;
+    --ColorHoverButton: #000000;
+
     --ColorFondoIcon: #EDEDED;
     --ColorIconInactivate: #CFCFCF;
 }
@@ -73,20 +79,38 @@ body{
     align-items: center;
 }
 
+/* Animating the edges of the main menu hover. */
 
 .option nav ul li{
+    position: relative;
     list-style: none;
+    height: 65px;
     margin: 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.option nav ul li::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: var(--ColorBackgroundButtom);
+    bottom: 0;
+    transform: scale(0, 1);
+    transition: transform 0.3s ease;
+    transform-origin: 0% 100%;
+}
+
+.option nav ul li:hover::after{
+    transform: scale(1.1,1);
 }
 
 .option nav ul li a{
     text-decoration: none;
     color: var(--ColorTitle);
     transition: color 0.3s ease-in-out;
-}
-
-.option nav ul li a:hover{
-    color: var(--ColorButtom);
 }
 
 .option nav ul {
@@ -114,15 +138,11 @@ body{
     transition: color 0.3s ease-in-out;
 }
 
-.acceso_plataforma a:hover{
-    color: var(--ColorButtom);
-}
 
 /* Creating collective styles */
-
 button{
-    background-color: var(--ColorButtom);
-    color: var(--ColorTitle);
+    background-color: var(--ColorBackgroundButtom);
+    color: var(--ColorTextButton);
     font-family: var(--fontTitle);
     font-size: var(--fontSizeButtom);
     font-weight: 500;
@@ -134,8 +154,7 @@ button{
 }
 
 button:hover{
-    background-color: var(--ColorTitle);
-    color: var(--ColorButtom);
+    background-color: var(--ColorHoverButton);
 }
 
 .acceso_plataforma button{
@@ -221,7 +240,7 @@ button:hover{
 }
 
 .color_web{
-    color: var(--ColorButtom);
+    color: var(--ColorTitle2);
 }
 
 .firt_message p{
@@ -264,12 +283,22 @@ button:hover{
 .html, .css, .js{
     width: 305px;
     height: 370px;
-    background-color: white;
+    background-color: var(--ColorBackground);
     border-radius: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0px 4px 32px rgb(158, 158, 158, 0.4);
+    box-shadow:
+        0px 0px 2.2px rgba(0, 0, 0, 0.011),
+        0px 0px 4.8px rgba(0, 0, 0, 0.016),
+        0px 0px 8.1px rgba(0, 0, 0, 0.019),
+        0px 0px 12.2px rgba(0, 0, 0, 0.022),
+        0px 0px 17.7px rgba(0, 0, 0, 0.025),
+        0px 0px 25px rgba(0, 0, 0, 0.028),
+        0px 0px 35.4px rgba(0, 0, 0, 0.031),
+        0px 0px 51.5px rgba(0, 0, 0, 0.034),
+        0px 0px 79.3px rgba(0, 0, 0, 0.039),
+        0px 0px 141px rgba(0, 0, 0, 0.05);
 }
 
 .icon{

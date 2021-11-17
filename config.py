@@ -9,10 +9,10 @@ class Config(object):
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SECRET_KEY = "Thismustbesecret"
 
-class productionConfig(Config):
+class ProductionConfig(Config):
     DEBUG = False
     SQLALCHEMY_DATABASE_URI = SQDU
-    SECRET_KEY = os.environ["SECRET_KEY"]
+    SECRET_KEY = "Thismustbesecret"
 
-class developmentConfig(Config):
+class DevelopmentConfig(Config):
     DEBUG = True

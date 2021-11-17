@@ -6,7 +6,7 @@ from app.routes.formRegisterandLogin import formRegisterandLogin
 from app.routes.platform import platform
 
 app = Flask(__name__)
-app.config.from_object("config.developmentConfig")
+app.config.from_object("config.DevelopmentConfig")
 
 db = SQLAlchemy(app)
 mg = Migrate(app, db)
