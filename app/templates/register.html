@@ -1,0 +1,27 @@
+{% extends "/base/baseForm.html" %}
+{% block title %} Registrarse {% endblock %}
+{% block content %}
+<div class="content_register">
+    <form action="">
+        {{ formReg.hidden_tag()}}
+        <h1>Registrarse</h1>
+        <div class="content_form">
+            {{formReg.name(class_="inpustComplete")}} <br>
+            {{formReg.lastname(class_="inpustComplete")}} <br>
+            <div class="documents">
+                {{formReg.documentType(class_="inputsMiddle")}}
+                {{formReg.documentNumber(class_="inputsMiddle")}}
+            </div>
+            {{formReg.email(class_="inpustComplete")}} <br>
+            <div class="documents">
+                {{formReg.age(class_="inputsMiddle")}}
+                {{formReg.gender(class_="inputsMiddle")}}
+            </div>
+            {{formReg.password(class_="inpustComplete")}} <br>
+            {{formReg.rePassword(class_="inpustComplete")}} <br>
+            {{formReg.submit(class_="buttonContinuar")}}
+            
+        </div>
+    </form>
+</div>
+{% endblock %}

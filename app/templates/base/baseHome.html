@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="shortcut icon" href="{{url_for('static', filename='/image/Logo/Logo.svg')}}" />
     <title>{% block title%}Base{% endblock%}</title>
+    <script src="{{url_for('static', filename='/js/functionButton.js')}}"></script>
 </head>
 <body>
     <div class="menu">
@@ -28,7 +29,7 @@
     
             <div class="acceso_plataforma">
                 <a href="/register" class="login">Iniciar Sesión</a>
-                <button class="register">Registrarse</button>
+                <button class="register" onclick="redirectionRegister()">Registrarse</button>
             </div>
         </div>
     </div>

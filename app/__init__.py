@@ -1,9 +1,11 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
+
 from app.routes.home import page_home
 from app.routes.formRegisterandLogin import formRegisterandLogin
 from app.routes.platform import platform
+
 
 app = Flask(__name__)
 app.config.from_object("config.DevelopmentConfig")

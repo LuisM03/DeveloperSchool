@@ -1,0 +1,207 @@
+/* ------------------------------FONTS------------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+
+/* ------------------------------VARIABLE------------------------------ */
+/* Variable for colors */
+:root{
+    --ColorBackground: white;
+
+    --ColorTitle: #2E2D2D;
+    --ColorTitle2: #808080;
+    --ColorParagraph: #2E2D2D;
+
+    --ColorBackgroundButtom: #2E2D2D;
+    --ColorTextButton: #ffffff;
+    --ColorHoverButton: #000000;
+
+    --ColorFondoIcon: #EDEDED;
+    --ColorIconInactivate: #CFCFCF;
+}
+/* Variable for font */
+:root{
+    --fontParagraph: 'Alice', serif;
+    --fontTitle: 'Montserrat', sans-serif;
+}
+/* Variable for font-zise */
+:root{
+    --fontSizeParagraph: 17px;
+    --fontSizeTitle: 48px;
+    --fontSizeButtom: 15px;
+    --fontSizeOption: 14px;
+    --fontSizeSubtitle: 30px;
+}
+
+/* --------------------------------------ICONS------------------------------------ */
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-normal { color: var(--ColorButtom);}
+
+/* Rules for using icons as white on a dark background.
+.material-icons.md-light { color: var(--ColorButtom); }
+.material-icons.md-light.md-inactive { color: var(--ColorIconInactivate); } */
+
+
+
+/* ------------------------------MAIN_CONTENT------------------------------ */
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: var(--ColorBackground);
+    font-family: var(--fontParagraph);
+}
+/* Menu customization */
+.menu{
+    width: 100%;
+    height: 70px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--fontTitle);
+    font-size: var(--fontSizeButtom);
+    font-weight: 500;
+    box-shadow: 0px 4px 32px rgb(158, 158, 158, 0.2);
+}
+
+.content_menu{
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Animating the edges of the main menu hover. */
+
+.option nav ul li{
+    position: relative;
+    list-style: none;
+    height: 65px;
+    margin: 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.option nav ul li::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: var(--ColorBackgroundButtom);
+    bottom: 0;
+    transform: scale(0, 1);
+    transition: transform 0.3s ease;
+    transform-origin: 0% 100%;
+}
+
+.option nav ul li:hover::after{
+    transform: scale(1.1,1);
+}
+
+.option nav ul li a{
+    text-decoration: none;
+    color: var(--ColorTitle);
+    transition: color 0.3s ease-in-out;
+}
+
+.option nav ul {
+    display: flex;
+    align-items: center;
+}
+
+.logo_option{
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* Creating collective styles */
+button{
+    background-color: var(--ColorBackgroundButtom);
+    color: var(--ColorTextButton);
+    font-family: var(--fontTitle);
+    font-size: var(--fontSizeButtom);
+    font-weight: 500;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s ease-in-out;
+}
+
+button:hover{
+    background-color: var(--ColorHoverButton);
+}
+
+form input{
+    border: none;
+    background-color: var(--ColorFondoIcon);
+    padding-left: 10px;
+    outline: none;
+}
+
+form select{
+    border: none;
+    background-color: var(--ColorFondoIcon);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* --------------------------FORM REGISTER-------------------------- */
+.content_register{
+    width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content_register form h1{
+    width: 400px;
+    text-align: center;
+    margin: 40px 0px;
+}
+
+.content_form{
+    width: 400px;
+    height: 575px;
+}
+
+.inpustComplete{
+    width: 100%;
+    height: 45px;
+    margin-bottom: 20px;
+}
+
+.documents{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 410px;
+    height: 45px;
+    margin-bottom: 20px;
+}
+
+.inputsMiddle{
+    width: 190px;
+    height: 45px;
+}
+
+
+.buttonContinuar{
+    width: 410px;
+    height: 45px;
+    background-color: var(--ColorTitle);
+    color: var(--ColorTextButton);
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} Document {% endblock%}</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='/css/formStyle.css')}}">
+    <link rel="shortcut icon" href="{{url_for('static', filename='/image/Logo/Logo.svg')}}" />
+</head>
+<body>
+    <div class="menu">
+        <div class="content_menu">
+            <div class="logo_option">
+                <a href="#"><img src="{{url_for('static', filename='/image/Logo/Logo.svg')}}" alt="Logo de la entidad"></a>
+                <div class="option">
+                    <nav>
+                        <ul>
+                            <li><a href="#">Inicio</a></li>
+                            <li><a href="#">Cursos</a></li>
+                            <li><a href="#">Conocenos</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    {% block content%}
+    {% endblock%}
+
+</body>
+</html>
