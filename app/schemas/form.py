@@ -12,7 +12,7 @@ class formRegister(FlaskForm):
     documentNumber = IntegerField('Número de documento', validators=[DataRequired(), Required('Introduzca su número de documento')], render_kw={"placeholder": "Número de documento"})
     email = EmailField('Correo', validators=[DataRequired(), validators.Email('Ingrese su correo electónico')], render_kw={"placeholder": "Correo"})
     age = IntegerField('Edad', validators=[DataRequired(), Required('Ingrese su edad')], render_kw={"placeholder": "Edad"})
-    gender = SelectField('Genero', choices=[('Sexo'), ('Hombre'), ('Mujer')], render_kw={"placeholder": "Sexo"})
+    gender = SelectField('Genero', choices=[('Hombre'), ('Mujer')], render_kw={"placeholder": "Sexo"})
     password = PasswordField('Contraseña', validators=[DataRequired(), Required('Ingrese una contraseña')], render_kw={"placeholder": "Contraseña"})
     rePassword = PasswordField('Reafirmar Contraseña', validators=[DataRequired(), EqualTo('password', message='Las contraseñas no coinciden')], render_kw={"placeholder": "Confirmar contraseña"})
     submit = SubmitField('Continuar')

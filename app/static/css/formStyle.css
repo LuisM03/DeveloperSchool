@@ -28,7 +28,7 @@
     --fontSizeParagraph: 17px;
     --fontSizeTitle: 48px;
     --fontSizeButtom: 15px;
-    --fontSizeOption: 14px;
+    --fontSizeOption: 13px;
     --fontSizeSubtitle: 30px;
 }
 
@@ -149,6 +149,9 @@ form input{
     background-color: var(--ColorFondoIcon);
     padding-left: 10px;
     outline: none;
+    font-family: var(--fontTitle);
+    color: var(--ColorTitle);
+    font-size: var(--fontSizeOption);
 }
 
 form select{
@@ -156,11 +159,14 @@ form select{
     background-color: var(--ColorFondoIcon);
     padding-left: 10px;
     padding-right: 10px;
+    font-family: var(--fontTitle);
+    color: var(--ColorTitle);
+    outline: none;
 }
-
 /* --------------------------FORM REGISTER-------------------------- */
 .content_register{
     width: 1000px;
+    height: 100vh;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -171,11 +177,38 @@ form select{
     width: 400px;
     text-align: center;
     margin: 40px 0px;
+    margin-top: 100px;
+    color: var(--ColorTitle);
+    font-family: var(--fontTitle);
+    font-size: var(--fontSizeSubtitle);
+}
+
+.content_register p{
+    font-family: var(--fontTitle);
+    font-size: var(--fontSizeOption);
+    margin-right: 10px;
+}
+
+.justInCase{
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+.justInCase a{
+    text-decoration: none;
+    color: var(--ColorTitle);
+    font-size: var(--fontSizeOption);
+    font-family: var(--fontTitle);
+    font-weight: 600;
 }
 
 .content_form{
     width: 400px;
-    height: 575px;
+    height: 500px;
+    margin-bottom: 20px;
 }
 
 .inpustComplete{
@@ -199,9 +232,19 @@ form select{
 }
 
 
-.buttonContinuar{
+.buttonContinue{
     width: 410px;
     height: 45px;
-    background-color: var(--ColorTitle);
-    color: var(--ColorTextButton);
+}
+
+
+
+.documents select{
+    appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+.documents select::-ms-expand{
+    display: none;
 }

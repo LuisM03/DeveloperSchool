@@ -1,0 +1,21 @@
+{% extends "/base/baseForm.html" %}
+{% block title %} Iniciar Sesión {% endblock %}
+{% block content %}
+<div class="content_register">
+    <form action="">
+        {{ formReg.hidden_tag()}}
+        <h1>Iniciar Sesión</h1>
+        <div class="content_form">
+            {{formReg.email(class_="inpustComplete")}} <br>
+            {{formReg.password(class_="inpustComplete")}} <br>
+            <button class="buttonContinue">Iniciar Sesión</button>
+            <div class="justInCase">
+                <p>Ya tengo una cuenta </p>
+                <a href="/register">Registrarse</a>
+            </div>
+        </div>
+    </div>
+
+    </form>
+</div>
+{% endblock %}

@@ -7,3 +7,8 @@ formRegisterandLogin = Blueprint('formRegisterandLogin', __name__, template_fold
 def register():
     formReg = formRegister()
     return render_template('register.html', formReg = formReg)
+
+@formRegisterandLogin.route('/login')
+def login():
+    formReg = formRegister()
+    return render_template('login.html', formReg = formReg)
