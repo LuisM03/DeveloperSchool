@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="{{url_for('static', filename='/css/style.css')}}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="shortcut icon" href="{{url_for('static', filename='/image/Logo/Logo.svg')}}" />
+    <script src="{{url_for('static', filename = '/js/scrollreveal.js')}}"></script>
     <title>{% block title%}Base{% endblock%}</title>
     <script src="{{url_for('static', filename='/js/functionButton.js')}}"></script>
 </head>
@@ -59,5 +61,6 @@
             </div>
         </div>
     </div>
+    <script src="{{url_for('static', filename='/js/animationsScrolls.js')}}"></script>
 </body>
 </html>
