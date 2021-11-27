@@ -7,13 +7,13 @@
 :root{
     --ColorBackground: white;
 
-    --ColorTitle: #2E2D2D;
+    --ColorTitle: #3981f5;
     --ColorTitle2: #808080;
     --ColorParagraph: #2E2D2D;
 
-    --ColorBackgroundButtom: #2E2D2D;
+    --ColorBackgroundButtom: #3981f5;
     --ColorTextButton: #ffffff;
-    --ColorHoverButton: #000000;
+    --ColorHoverButton: #1259ca;
 
     --ColorFondoIcon: #EDEDED;
     --ColorIconInactivate: #CFCFCF;
@@ -25,11 +25,16 @@
 }
 /* Variable for font-zise */
 :root{
-    --fontSizeParagraph: 17px;
+    --fontSizeParagraph: 20px;
     --fontSizeTitle: 48px;
     --fontSizeButtom: 15px;
     --fontSizeOption: 14px;
     --fontSizeSubtitle: 30px;
+}
+
+:root{
+    --fontSizeTitleResponsive: 35px;
+    --fontSizeParagraphResponsive: 22px;
 }
 
 /* --------------------------------------ICONS------------------------------------ */
@@ -52,6 +57,7 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 body{
@@ -72,14 +78,24 @@ body{
     box-shadow: 0px 4px 32px rgb(158, 158, 158, 0.2);
 }
 
+
 .content_menu{
-    width: 1000px;
+    width: 100%;
+    max-width: 1000px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 /* Animating the edges of the main menu hover. */
+.option{
+    display: flex;
+}
+
+.bx-menu, #menu{
+    opacity: 0;
+    font-size: 48px;
+}
 
 .option nav ul li{
     position: relative;
@@ -99,8 +115,8 @@ body{
     background-color: var(--ColorBackgroundButtom);
     bottom: 0;
     transform: scale(0, 1);
-    transition: transform 0.3s ease;
-    transform-origin: 0% 100%;
+    transition: transform 0.3s ease-in-out;
+    transform-origin: 50% 100% 50%;
 }
 
 .option nav ul li:hover::after{
@@ -109,7 +125,7 @@ body{
 
 .option nav ul li a{
     text-decoration: none;
-    color: var(--ColorTitle);
+    color: var(--ColorParagraph);
     transition: color 0.3s ease-in-out;
 }
 
@@ -134,7 +150,7 @@ body{
 
 .acceso_plataforma a{
     text-decoration: none;
-    color: var(--ColorTitle); 
+    color: var(--ColorParagraph); 
     transition: color 0.3s ease-in-out;
 }
 
@@ -146,7 +162,7 @@ button{
     font-family: var(--fontTitle);
     font-size: var(--fontSizeButtom);
     font-weight: 500;
-    border-radius: 5px;
+    border-radius: 2px;
     border: none;
     outline: none;
     cursor: pointer;
@@ -176,7 +192,8 @@ button:hover{
 }
 
 .menu_footer{
-    width: 1000px;
+    width: 100%;
+    max-width: 1000px;
     display: flex;
     justify-content: space-between;
 }
@@ -194,7 +211,7 @@ button:hover{
     text-decoration: none;
     font-size: var(--fontSizeOption);
     font-family: var(--fontTitle);
-    color: var(--ColorTitle);
+    color: var(--ColorParagraph);
     transition: font-weight 0.3s ease-in-out;
 }
 
@@ -203,11 +220,15 @@ button:hover{
 }
 
 .description_project{
-    width: 250px;
+    width: 100%;
+    max-width: 250px;
     text-align: right;
-    color: var(--ColorTitle);
+    color: var(--ColorParagraph);
 }
 
+.description_project h3{
+    color: var(--ColorTitle);
+}
 .description_project h3{
     font-size: var(--fontSizeOption);
     font-family: var(--fontTitle);
@@ -221,8 +242,11 @@ button:hover{
 
 
 /* ----------------------------------------------INDEX-------------------------------------------------- */
+
+
 .firt_message{
-    width: 1000px;
+    width: 100%;
+    max-width: 1000px;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -237,11 +261,11 @@ button:hover{
     font-family: var(--fontTitle);
     text-align: center;
     margin-bottom: 20px;
-    color: var(--ColorTitle);
+    color: var(--ColorParagraph);
 }
 
 .color_web{
-    color: var(--ColorTitle2);
+    color: var(--ColorTitle);
 }
 
 .firt_message p{
@@ -250,7 +274,7 @@ button:hover{
     font-family: var(--fontParagraph);
     text-align: center;
     margin-bottom: 25px;
-    color: var(--ColorTitle);
+    color: var(--ColorParagraph);
 }
 
 .firt_message button{
@@ -260,7 +284,8 @@ button:hover{
 
 /* Courses Costumizes */
 .course{
-    width: 1000px;
+    width: 100%;
+    max-width: 1000px;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -271,18 +296,20 @@ button:hover{
 .subtitle{
     font-size: var(--fontSizeSubtitle);
     font-family: var(--fontTitle);
-    color: var(--ColorTitle);
+    color: var(--ColorParagraph);
     margin-bottom: 50px;
 }
 
 .term{
-    width: 1000px;
+    width: 100%;
+    max-width: 1000px;
     display: flex;
     justify-content: space-between;
 }
 
 .html, .css, .js{
-    width: 305px;
+    width: 100%;
+    max-width: 305px;
     height: 370px;
     background-color: var(--ColorBackground);
     border-radius: 15px;
@@ -290,16 +317,10 @@ button:hover{
     flex-direction: column;
     align-items: center;
     box-shadow:
-        0px 0px 2.2px rgba(0, 0, 0, 0.011),
-        0px 0px 4.8px rgba(0, 0, 0, 0.016),
-        0px 0px 8.1px rgba(0, 0, 0, 0.019),
-        0px 0px 12.2px rgba(0, 0, 0, 0.022),
-        0px 0px 17.7px rgba(0, 0, 0, 0.025),
-        0px 0px 25px rgba(0, 0, 0, 0.028),
-        0px 0px 35.4px rgba(0, 0, 0, 0.031),
-        0px 0px 51.5px rgba(0, 0, 0, 0.034),
-        0px 0px 79.3px rgba(0, 0, 0, 0.039),
-        0px 0px 141px rgba(0, 0, 0, 0.05);
+    0px 0px 10.2px -21px rgba(0, 0, 0, 0.092),
+    0px 0px 47px -21px rgba(0, 0, 0, 0.37);
+  
+  
 }
 
 .icon{
@@ -313,10 +334,15 @@ button:hover{
     margin: 20px;
 }
 
+.icon i{
+    font-size: 48px;
+    color: var(--ColorBackgroundButtom);
+}
+
 .term h2{
     font-size: var(--fontSizeButtom);
     margin: 20px;
-    color: var(--ColorTitle);
+    color: var(--ColorParagraph);
     font-family: var(--fontTitle);
 }
 
@@ -324,7 +350,7 @@ button:hover{
     width: 250px;
     text-align: center;
     font-size: var(--fontSizeParagraph);
-    color: var(--ColorTitle);
+    color: var(--ColorParagraph);
     margin-bottom: 30px;
 }
 
@@ -335,7 +361,8 @@ button:hover{
 
 /* Message Customizes */
 .message{
-    width: 1000px;
+    width: 100%;
+    max-width: 1000px;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -349,13 +376,13 @@ button:hover{
     font-size: var(--fontSizeSubtitle);
     margin-bottom: 50px;
     text-align: center;
-    color: var(--ColorTitle);
+    color: var(--ColorParagraph);
 }
 
 .message p{
     width: 630px;
     font-size: var(--fontSizeParagraph);
-    color: var(--ColorTitle);
+    color: var(--ColorParagraph);
     text-align: center;
     margin-bottom: 40px;
 }
@@ -365,4 +392,44 @@ button:hover{
     height: 45px;
 }
 
+@media (max-width: 700px) {
+    .firt_message p, 
+    .firt_message h1, 
+    .message h2, 
+    .message p,
+    .footer,
+    .menu{
+        width: 100%;
+        padding: 0px 20px;
+    }
 
+    .complete_logo, 
+    .description_project,
+    .option nav ul li,
+    .acceso_plataforma{
+        display: none;
+    }
+
+    .bx-menu{
+        opacity: 1;
+    }
+
+    .menu_footer, 
+    .option_menu{
+        width: 100%;
+        margin: auto;
+        text-align: center;
+    }
+    .term{
+      flex-wrap: wrap;
+    }
+    .course{
+        padding: auto;
+    }
+
+    .html, .css, .js{
+        margin: 20px auto;
+    }
+
+
+  }

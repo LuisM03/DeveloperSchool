@@ -4,23 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="{{url_for('static', filename='/css/style.css')}}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="shortcut icon" href="{{url_for('static', filename='/image/Logo/Logo.svg')}}" />
-    <script src="{{url_for('static', filename = '/js/scrollreveal.js')}}"></script>
     <title>{% block title%}Base{% endblock%}</title>
-    <script src="{{url_for('static', filename='/js/functionButton.js')}}"></script>
 </head>
 <body>
     <div class="menu">
-
         <div class="content_menu">
             <div class="logo_option">
                 <a href="/home"><img src="{{url_for('static', filename='/image/Logo/Logo.svg')}}" alt="Logo de la entidad"></a>
                 <div class="option">
+                    <input type="checkbox" id="menu">
+                    <label for="menu"><i class='bx bx-menu'></i></label>
                     <nav>
-                        <ul>
+                        <ul class="options">
                             <li><a href="/home">Inicio</a></li>
                             <li><a href="#">Cursos</a></li>
                             <li><a href="#">Conocenos</a></li>
@@ -61,6 +60,5 @@
             </div>
         </div>
     </div>
-    <script src="{{url_for('static', filename='/js/animationsScrolls.js')}}"></script>
 </body>
 </html>

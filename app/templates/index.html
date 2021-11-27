@@ -3,8 +3,8 @@
 {% block content%}
 <div class="content_home">
     <div class="firt_message">
-        <h1>Prepárate para el futuro y domina la <span class="color_web" >web</span>.</h1>
-        <p>El mundo muestra un gran déficit de desarrolladores 
+        <h1 class="firt_message_animation">Prepárate para el futuro y domina la <span class="color_web" >web</span>.</h1>
+        <p class="firt_text_animation">El mundo muestra un gran déficit de desarrolladores 
            de software, necesitan de ti y de tus conocimientos. 
            Demuestra lo que sabes y lo que eres capaz de hacer.</p>
         <button>¡Empieza ya!</button>
@@ -14,7 +14,7 @@
         <div class="term">
             <div class="html">
                 <div class="icon">
-                    <img src="{{url_for('static', filename='/image/Icons/html.svg')}}" alt="">
+                    <i class='bx bxl-html5' ></i>
                 </div>
                 <h2>HTML</h2>
                 <p>Es el componente más básico de la Web. Define el significado y la estructura del contenido web.</p>
@@ -22,7 +22,7 @@
             </div>
             <div class="css">
                 <div class="icon">
-                    <img src="{{url_for('static', filename='/image/Icons/css.svg')}}" alt="">
+                    <i class='bx bxl-css3' ></i>
                 </div>
                 <h2>CSS</h2>
                 <p>Es el segundo lenguaje más esencial para crear páginas web, define los estilos necesarios.</p>
@@ -30,7 +30,7 @@
             </div>
             <div class="js">
                 <div class="icon">
-                    <img src="{{url_for('static', filename='/image/Icons/js.svg')}}" alt="">
+                    <i class='bx bxl-javascript'></i>
                 </div>
                 <h2>JAVASCRIPT</h2>
                 <p>Te permite implementar funciones para animar botones, ejecutar funciones, etc.</p>
@@ -44,4 +44,6 @@
         <button>Empieza ya con los cursos</button>
     </div>
 </div>
+<script>
+</script>
 {% endblock%}

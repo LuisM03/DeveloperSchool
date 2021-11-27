@@ -1,7 +1,10 @@
-window.sr = ScrollReveal();
+gsap.registerPlugin(ScrollTrigger);
 
-    sr.reveal('.html',{
-        durations: 4000,
-        origin: 'bottom',
-        distance: '-100px'
-    });
+gsap.to('.firt_message_animation',{
+    ScrollTrigger:{
+        trigger: '.firt_message_animation',
+        toggleAction: 'restart pause reverse pause'
+    },
+    duration: 4,
+    x: 300,
+});
