@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{url_for('static', filename='/css/style.css')}}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="shortcut icon" href="{{url_for('static', filename='/image/Logo/Logo.svg')}}" />
+    <script src="{{url_for('static', filename='/js/functionButton.js')}}"></script>
     <title>{% block title%}Base{% endblock%}</title>
 </head>
 <body>
@@ -16,8 +17,6 @@
             <div class="logo_option">
                 <a href="/home"><img src="{{url_for('static', filename='/image/Logo/Logo.svg')}}" alt="Logo de la entidad"></a>
                 <div class="option">
-                    <input type="checkbox" id="menu">
-                    <label for="menu"><i class='bx bx-menu'></i></label>
                     <nav>
                         <ul class="options">
                             <li><a href="/home">Inicio</a></li>
@@ -27,7 +26,6 @@
                     </nav>
                 </div>
             </div>
-    
             <div class="acceso_plataforma">
                 <a href="/login" class="login">Iniciar Sesión</a>
                 <button class="register" onclick="redirectionRegister()">Registrarse</button>

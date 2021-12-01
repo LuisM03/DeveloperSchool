@@ -21,7 +21,7 @@ def register():
         rePassword = request.form.get('rePassword')
 
         if formReg.validate_on_submit():
-            return 'success' ###Por ahora lo vamos  a dejar que nos retorne ese mensaje
+            return continue_register()
         else:
             return 'Los parametros son incorrectos' ###Al igual que este mensaje.
         
@@ -33,3 +33,8 @@ def register():
 def login():
     formReg = formRegister()
     return render_template('login.html', formReg = formReg)
+
+@formRegisterandLogin.route('/continue_register')
+def continue_register():
+    formReg = formRegister()
+    return render_template('continueRegister.html', formReg = formReg)

@@ -2,7 +2,7 @@ from flask_wtf import FlaskForm
 from wtforms import IntegerField,SelectField,SubmitField,StringField
 from wtforms import validators
 from wtforms.fields.html5 import EmailField
-from wtforms.fields.simple import PasswordField
+from wtforms.fields.simple import PasswordField, TextAreaField
 from wtforms.validators import DataRequired, EqualTo, Required	
 
 class formRegister(FlaskForm):
@@ -15,4 +15,5 @@ class formRegister(FlaskForm):
     gender = SelectField('Genero', choices=[('Hombre'), ('Mujer')])
     password = PasswordField('Contraseña', validators=[DataRequired(), Required('Ingrese una contraseña')], render_kw={"placeholder": "Contraseña"})
     rePassword = PasswordField('Reafirmar Contraseña', validators=[DataRequired(), EqualTo('password', message='Las contraseñas no coinciden')], render_kw={"placeholder": "Confirmar contraseña"})
+    textarea = TextAreaField('Mensaje', validators=[DataRequired()])
     submit = SubmitField('Continuar')

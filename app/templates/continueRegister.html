@@ -1,0 +1,17 @@
+{% extends "/base/baseForm.html" %}
+{% block title %} Iniciar Sesión {% endblock %}
+{% block content %}
+<div class="content_continue_mesage">
+    <form action="">
+        {{ formReg.hidden_tag()}}
+        <h1>Continuar Registro</h1>
+        <p>Ingresa una frase que te motive a estudiar cada vez que la veas.</p>
+        <div class="content_form_continue">
+            {{formReg.textarea(class_="textarea_mesage")}} <br>
+            <button class="buttonContinue">Terminar</button> 
+            <a href="#">Omitir</a>
+        </div>
+    </div>
+    </form>
+</div>
+{% endblock %}

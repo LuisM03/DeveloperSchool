@@ -7,13 +7,13 @@
 :root{
     --ColorBackground: white;
 
-    --ColorTitle: #2E2D2D;
+    --ColorTitle: #3981f5;
     --ColorTitle2: #808080;
     --ColorParagraph: #2E2D2D;
 
-    --ColorBackgroundButtom: #2E2D2D;
+    --ColorBackgroundButtom: #3981f5;
     --ColorTextButton: #ffffff;
-    --ColorHoverButton: #000000;
+    --ColorHoverButton: #1259ca;
 
     --ColorFondoIcon: #EDEDED;
     --ColorIconInactivate: #CFCFCF;
@@ -25,11 +25,16 @@
 }
 /* Variable for font-zise */
 :root{
-    --fontSizeParagraph: 17px;
+    --fontSizeParagraph: 20px;
     --fontSizeTitle: 48px;
     --fontSizeButtom: 15px;
-    --fontSizeOption: 13px;
+    --fontSizeOption: 14px;
     --fontSizeSubtitle: 30px;
+}
+
+:root{
+    --fontSizeTitleResponsive: 35px;
+    --fontSizeParagraphResponsive: 22px;
 }
 
 /* --------------------------------------ICONS------------------------------------ */
@@ -57,6 +62,7 @@
 body{
     background-color: var(--ColorBackground);
     font-family: var(--fontParagraph);
+    height: 100vh;
 }
 /* Menu customization */
 .menu{
@@ -109,7 +115,7 @@ body{
 
 .option nav ul li a{
     text-decoration: none;
-    color: var(--ColorTitle);
+    color: var(--ColorParagraph);
     transition: color 0.3s ease-in-out;
 }
 
@@ -133,7 +139,7 @@ button{
     font-family: var(--fontTitle);
     font-size: var(--fontSizeButtom);
     font-weight: 500;
-    border-radius: 5px;
+    border-radius: 2px;
     border: none;
     outline: none;
     cursor: pointer;
@@ -160,25 +166,26 @@ form select{
     padding-left: 10px;
     padding-right: 10px;
     font-family: var(--fontTitle);
-    color: var(--ColorTitle);
+    color: var(--ColorParagraph);
     outline: none;
 }
 /* --------------------------FORM REGISTER-------------------------- */
 .content_register{
-    width: 1000px;
-    height: 100vh;
-    margin: auto;
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .content_register form h1{
-    width: 400px;
+    width: 300px;
     text-align: center;
     margin: 40px 0px;
     margin-top: 100px;
-    color: var(--ColorTitle);
+    color: var(--ColorParagraph);
     font-family: var(--fontTitle);
     font-size: var(--fontSizeSubtitle);
 }
@@ -190,7 +197,7 @@ form select{
 }
 
 .justInCase{
-    width: 400px;
+    width: 300px;
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
@@ -206,13 +213,12 @@ form select{
 }
 
 .content_form{
-    width: 400px;
-    height: 500px;
+    width: 100%;
     margin-bottom: 20px;
 }
 
 .inpustComplete{
-    width: 100%;
+    width: 400px;
     height: 45px;
     margin-bottom: 20px;
 }
@@ -247,4 +253,66 @@ form select{
 
 .documents select::-ms-expand{
     display: none;
+}
+
+
+/* --------------------CONTINUE REGISTER------------------------- */
+.content_continue_mesage{
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content_continue_mesage form h1{
+    text-align: center;
+    margin: 40px 0px;
+    margin-top: 100px;
+    color: var(--ColorParagraph);
+    font-family: var(--fontTitle);
+    font-size: var(--fontSizeSubtitle);
+}
+
+.content_continue_mesage form p{
+    font-family: var(--fontParagraph);
+    font-size: var(--fontSizeParagraph);
+    color: var(--ColorParagraph);
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.textarea_mesage{
+    width: 408px;
+    resize: none;
+    min-height: 121px;
+}
+
+.content_form_continue{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.textarea_mesage{
+    box-sizing: border-box;
+    border: none;
+    background-color: var(--ColorFondoIcon);
+    padding:10px;
+    outline: none;
+    font-family: var(--fontTitle);
+    color: var(--ColorParagraph);
+    font-size: var(--fontSizeOption);
+}
+
+.content_form_continue a{
+    margin-top: 20px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    color: var(--ColorParagraph);
 }

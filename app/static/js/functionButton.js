@@ -2,5 +2,5 @@
 
 // Routes for register tab.
 function redirectionRegister(){
-    window.location.assign('/register')
+    window.location.href = '/register'; 
 }
